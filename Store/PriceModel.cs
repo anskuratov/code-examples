@@ -16,14 +16,14 @@ namespace Assets.Sources.Store
 
         private readonly Color[] _resourceColors =
         {
-        _moneyColor,
-        _premiumMoneyColor,
-        _oilColor,
-        _refinedOilColor,
-        _benzineColor,
-        _dieselColor,
-        _energyColor
-    };
+            _moneyColor,
+            _premiumMoneyColor,
+            _oilColor,
+            _refinedOilColor,
+            _benzineColor,
+            _dieselColor,
+            _energyColor
+        };
 
         [SerializeField]
         private Text _priceCost;
