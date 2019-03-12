@@ -38,13 +38,13 @@ public class AuthorizationManagerBehaviour : MonoBehaviour
 
     private void CheckVersion()
     {
-        _webManager.Send(_apiRoutes.Main.Version(_gameSettings.Version), 
+        _webManager.Send(_apiRoutes.Main.Version(_gameSettings.Version),
             CheckVersionHandler);
     }
 
     private void CheckVersionHandler(ResponseCode responseCode)
     {
-        switch(responseCode)
+        switch (responseCode)
         {
             case ResponseCode.Success:
                 Debug.Log("Current version");
@@ -59,7 +59,7 @@ public class AuthorizationManagerBehaviour : MonoBehaviour
             default:
                 throw new System.Exception($"Response code version control: {(int)responseCode}");
         }
-            
+
     }
 
     private void Authenticate()
@@ -101,7 +101,7 @@ public class AuthorizationManagerBehaviour : MonoBehaviour
         switch (responseCode)
         {
             case ResponseCode.Success:
-				_gameDataPool.InitializeData(startData);
+                _gameDataPool.InitializeData(startData);
                 LoadGameScene();
                 break;
 
